@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stop_watch {
+  border: 2px solid rgba(255, 255, 255, 0.137);
+  padding: 20px;
+  border-radius: 10px;
+  width: 220px;
+  text-align: center;
+}
+.container {
+  background: #111;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.container p:nth-child(1) {
+  color: white;
+  font-family: "Fira Code";
+  margin: 0px 0 20px 0;
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+#watch_text {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: white;
+  font-family: "Fira Code";
+  border: 2px solid rgba(255, 255, 255, 0.233);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+button {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.137);
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  font-family: "Cascadia Code";
+  font-size: 1rem;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.5;
+}
+.start {
+  background: rgba(0, 128, 0, 0.267);
+}
+.stop {
+  background: rgba(255, 0, 0, 0.233);
+}
+.moveHereThere {
+  animation: moveHereThere;
+  animation-delay: 300ms;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+}
+@keyframes moveHereThere {
+  0% {
+    transform: scale(01);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(01);
+  }
+}
+.timer {
+  width: 220px;
+  border: 2px solid rgba(255, 255, 255, 0.137);
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-family: "Fira Code";
+  border-radius: 10px;
+}
+.timer_display {
+  display: none;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.137);
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  font-family: "Cascadia Code";
+  font-size: 1rem;
+  cursor: pointer;
+}
+.inputs {
+  font-weight: bolder;
+}
+.timer input {
+  width: 50px;
+  background: transparent;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.205);
+  border-radius: 5px;
+  padding: 3px;
+  color: white;
+  font-family: "Fira Code";
+  font-weight: bold;
+}
+.progress_bar_element {
+  width: 100%;
+  height: 10px;
+  background: transparent;
+  z-index: 6;
+  margin-top: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.199);
+  padding: 5px;
+  transition: 0.2s;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.progress_bar_element:hover {
+  height: 50px;
+}
+.progress_bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: rgba(255, 0, 0, 0.295);
+  transition: 0.3s;
+}

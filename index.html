@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Scrapping</title>
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="stop_watch">
+        <p id="title">STOP WATCH</p>
+        <p id="watch_text">Sample Text</p>
+        <button
+          id="start"
+          class="start"
+          type="button"
+          onclick="stopWatchStart()"
+        >
+          START
+        </button>
+        <button id="stop" class="stop">RESET</button>
+      </div>
+      <div class="timer">
+        <p>TIMER</p>
+        <p class="timer_display"></p>
+        <div class="inputs">
+          <input
+            type="text"
+            id="input_hour"
+            autocomplete="off"
+            placeholder="Hr"
+          />:<input
+            type="text"
+            placeholder="Min"
+            id="input_minute"
+            autocomplete="off"
+          />:<input
+            type="text"
+            id="input_second"
+            autocomplete="off"
+            placeholder="Sec"
+          />
+        </div>
+        <br />
+        <button type="button" id="start_timer">START</button>
+        <button type="button" class="stop" id="stop_timer">RESET</button>
+        <br />
+      </div>
+      <div class="progress_bar_element">
+        <div class="progress_bar"></div>
+      </div>
+    </div>
+  </body>
+</html>
