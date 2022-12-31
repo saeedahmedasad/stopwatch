@@ -84,6 +84,7 @@ const timerStartBtn = document.querySelector("#start_timer");
 const timerDisplay = document.querySelector(".timer_display");
 const progressBar = document.querySelector(".progress_bar");
 const timerStopBtn = document.querySelector("#stop_timer");
+const progressBarElement = document.querySelector(".progress_bar_element");
 timerStopBtn.addEventListener("click", () => {
   timerDisplay.innerText = "00:00:00";
   clearInterval(secondTimer);
@@ -122,6 +123,7 @@ function timerFunc() {
   timerDisplay.style.display = "block";
   if (tsec != 0) {
     secondTimer = setInterval(() => {
+      progressBarElement.style.display = "block";
       let progress = Math.floor((tsec / totalTimeSelected) * 100);
       progressBar.style.width = progress + "%";
       if (progress < 30) {
@@ -162,6 +164,9 @@ function timerFunc() {
         inputHour.value = "";
         inputMinute.value = "";
         inputSecond.value = "";
+        setTimeout(() => {
+          progressBarElement.style.display = "none";
+        }, 1000);
       }
     }, 1000);
   } else {
